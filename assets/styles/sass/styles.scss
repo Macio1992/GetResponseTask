@@ -1,0 +1,310 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+body{
+    margin: 0;
+    padding: 0;
+    background: $bodyColor;
+}
+
+header {
+    background: $headerColor;
+    padding: 20px 0;
+    div#header {
+        width: 50%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 760px){
+            width: 95%;
+            display: block;
+        }
+        button#dropbutton{
+            display: none;
+            @include buttonMobile();
+            @media only screen and (max-width: 760px){
+                display: block;
+            }
+        }
+        ul#menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            @media only screen and (max-width: 760px){
+                display: none;
+                clear: both;
+                margin-top: 20px;
+                li {
+                    text-align: center;
+                }
+            }
+            &.show{
+                display: block;
+            }
+            li {
+                a {
+                    font-family: $fontHelvetica;
+                    text-decoration: none;
+                    color: $orangeColor;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    padding: 10px;
+                    display: block;
+                    &:hover{
+                        background-color: $orangeColor;
+                        color: white;
+                    }
+                }
+            }
+        }
+        div#info {
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                &#info{
+                    width: 50px;
+                    margin-right: 10px;
+                }
+                &#arrow{
+                    width: 10px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+            p{
+                display: inline-block;
+                vertical-align: middle;
+                font-family: $fontHelvetica;
+            }
+        }
+    }
+}
+
+div#main {
+    width: 55%;
+    margin: auto;
+    margin-bottom: 20px;
+
+    div#navigation {
+        display: flex;
+        justify-content: space-between;
+        div#progress {
+            @include pNavHeader();
+        }
+        div#slider {
+            display: flex;
+            h1 {
+                font-family: $fontHelvetica;
+                color: $orangeColor;
+                font-weight: normal;
+                letter-spacing: 1px;
+                margin: 20px;
+            }
+            img {
+                align-self: center;
+                cursor: pointer;
+            }
+        }
+        div#options {
+            @include pNavHeader();
+            div#images {
+                display: flex;
+                justify-content: space-between;
+                img {
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    table {
+        font-family: $fontHelvetica;
+        background: #eeeeee;
+        margin-bottom: 20px;
+        tbody {
+            tr {
+                th {
+                    &.day {
+                        font-size: 22px;
+                        text-transform: uppercase;
+                        color: $greenColor;
+                    }
+                    &.time {
+                        padding: 0 35px;
+                        font-weight: normal;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                td {
+                    background: white;
+                    padding: 15px 10px;
+                    h4 {
+                        margin-top: 0;
+                        margin-bottom: 10px; 
+                        color: $dishName;
+                        font-weight: normal;
+                        text-align: center;
+                    }
+                    img {
+                        display: block;
+                        margin: auto;
+                    }
+                    &.gym {
+                        background: none;
+                        text-align: center;
+                    }
+                    &.workout{
+                        background: none;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        img {
+                            margin: initial;
+                        }
+                        h4{
+                            margin: 0;
+                        }
+                    }
+                }
+        }
+        
+        }
+        &.desktop{
+            display: block;
+            @media only screen and (max-width: 760px){
+                display: none;
+            }
+        }
+        &.mobile {
+            display: none;
+            @media only screen and (max-width: 760px){
+                display: block;
+            }
+        }
+    }
+
+    div#posts {
+
+    }
+
+}
+
+/*
+div#main{
+    
+    table {
+        
+        tbody {
+            tr {
+                th {
+                    
+                    &.chosen{
+                        color: $orangeColor;
+                    }
+                }
+                td {
+                    
+                    
+                }
+            }
+        }
+    }
+    div#posts{
+        display: flex;
+        margin-top: 15px;
+        div.post{
+            padding: 0 20px;
+            h2{
+                text-align: center;
+            }
+            &:first-child{
+                border-right: 1px solid $borderPost;
+            }
+            &:last-child{
+                border-left: 1px solid $borderPost;
+            }
+            button {
+                background: none;
+                border: 1px solid $borderPost;
+                padding: 10px;
+                border-radius: 5px;
+                outline: 0;
+                font-family: $fontHelvetica;
+                color: $buttonColor;
+                cursor: pointer;
+                font-size: 18px;
+                img{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}*/
+
+/*table.mobile{
+    display: none;
+}*/
+/*
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px){
+    div#main {
+        width: 100%;
+    }
+
+    div#navigation {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    div#posts {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    table.desktop{
+        display: none;
+    }
+
+    table.mobile {
+        width: 96%;
+        margin: auto;
+        display: block;
+        tr {
+            display: block;
+        }
+    
+        tr.diet {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            th{
+                width: 30%;
+            }
+            td{
+                width: 70%;
+            }
+        }
+    
+        th.day{
+            margin: auto;
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+        }
+    
+        th.time {
+            align-self: center;
+        }
+    
+        td{
+            display: block;
+        }
+    }
+}*/
+

@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9; }
+
+header {
+  background: #ffffff;
+  padding: 20px 0; }
+  header div#header {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 760px) {
+      header div#header {
+        width: 95%;
+        display: block; } }
+    header div#header button#dropbutton {
+      display: none;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      text-indent: -9999px;
+      outline: 0;
+      float: left;
+      background: none;
+      background-image: url("../../images/burgerIcon.png");
+      background-repeat: no-repeat;
+      background-size: 80% 100%; }
+      @media only screen and (max-width: 760px) {
+        header div#header button#dropbutton {
+          display: block; } }
+    header div#header ul#menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; }
+      @media only screen and (max-width: 760px) {
+        header div#header ul#menu {
+          display: none;
+          clear: both;
+          margin-top: 20px; }
+          header div#header ul#menu li {
+            text-align: center; } }
+      header div#header ul#menu.show {
+        display: block; }
+      header div#header ul#menu li a {
+        font-family: Helvetica;
+        text-decoration: none;
+        color: #ff801a;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px;
+        display: block; }
+        header div#header ul#menu li a:hover {
+          background-color: #ff801a;
+          color: white; }
+    header div#header div#info img {
+      display: inline-block;
+      vertical-align: middle; }
+      header div#header div#info img#info {
+        width: 50px;
+        margin-right: 10px; }
+      header div#header div#info img#arrow {
+        width: 10px;
+        margin-left: 10px;
+        cursor: pointer; }
+    header div#header div#info p {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: Helvetica; }
+
+div#main {
+  width: 55%;
+  margin: auto;
+  margin-bottom: 20px; }
+  div#main div#navigation {
+    display: flex;
+    justify-content: space-between; }
+    div#main div#navigation div#progress p {
+      font-family: Helvetica;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #bdbdbd;
+      text-align: center; }
+    div#main div#navigation div#slider {
+      display: flex; }
+      div#main div#navigation div#slider h1 {
+        font-family: Helvetica;
+        color: #ff801a;
+        font-weight: normal;
+        letter-spacing: 1px;
+        margin: 20px; }
+      div#main div#navigation div#slider img {
+        align-self: center;
+        cursor: pointer; }
+    div#main div#navigation div#options p {
+      font-family: Helvetica;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #bdbdbd;
+      text-align: center; }
+    div#main div#navigation div#options div#images {
+      display: flex;
+      justify-content: space-between; }
+      div#main div#navigation div#options div#images img {
+        align-self: center; }
+  div#main table {
+    font-family: Helvetica;
+    background: #eeeeee;
+    margin-bottom: 20px; }
+    div#main table tbody tr th.day {
+      font-size: 22px;
+      text-transform: uppercase;
+      color: #b3c304; }
+    div#main table tbody tr th.time {
+      padding: 0 35px;
+      font-weight: normal; }
+      div#main table tbody tr th.time span {
+        font-weight: bold; }
+    div#main table tbody tr td {
+      background: white;
+      padding: 15px 10px; }
+      div#main table tbody tr td h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #828282;
+        font-weight: normal;
+        text-align: center; }
+      div#main table tbody tr td img {
+        display: block;
+        margin: auto; }
+      div#main table tbody tr td.gym {
+        background: none;
+        text-align: center; }
+      div#main table tbody tr td.workout {
+        background: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; }
+        div#main table tbody tr td.workout img {
+          margin: initial; }
+        div#main table tbody tr td.workout h4 {
+          margin: 0; }
+    div#main table.desktop {
+      display: block; }
+      @media only screen and (max-width: 760px) {
+        div#main table.desktop {
+          display: none; } }
+    div#main table.mobile {
+      display: none; }
+      @media only screen and (max-width: 760px) {
+        div#main table.mobile {
+          display: block; } }
+
+/*
+div#main{
+    
+    table {
+        
+        tbody {
+            tr {
+                th {
+                    
+                    &.chosen{
+                        color: $orangeColor;
+                    }
+                }
+                td {
+                    
+                    
+                }
+            }
+        }
+    }
+    div#posts{
+        display: flex;
+        margin-top: 15px;
+        div.post{
+            padding: 0 20px;
+            h2{
+                text-align: center;
+            }
+            &:first-child{
+                border-right: 1px solid $borderPost;
+            }
+            &:last-child{
+                border-left: 1px solid $borderPost;
+            }
+            button {
+                background: none;
+                border: 1px solid $borderPost;
+                padding: 10px;
+                border-radius: 5px;
+                outline: 0;
+                font-family: $fontHelvetica;
+                color: $buttonColor;
+                cursor: pointer;
+                font-size: 18px;
+                img{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}*/
+/*table.mobile{
+    display: none;
+}*/
+/*
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px){
+    div#main {
+        width: 100%;
+    }
+
+    div#navigation {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    div#posts {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    table.desktop{
+        display: none;
+    }
+
+    table.mobile {
+        width: 96%;
+        margin: auto;
+        display: block;
+        tr {
+            display: block;
+        }
+    
+        tr.diet {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            th{
+                width: 30%;
+            }
+            td{
+                width: 70%;
+            }
+        }
+    
+        th.day{
+            margin: auto;
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+        }
+    
+        th.time {
+            align-self: center;
+        }
+    
+        td{
+            display: block;
+        }
+    }
+}*/

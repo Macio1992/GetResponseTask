@@ -1,0 +1,24 @@
+@mixin pNavHeader(){
+    p {
+        font-family: $fontHelvetica;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $navHeaderColor;
+        text-align: center;
+    }
+}
+
+@mixin buttonMobile(){
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+    outline: 0;
+    float: left;
+    background: none;
+    background-image: url('../../images/burgerIcon.png');
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
