@@ -7,7 +7,7 @@ header {
   background: #ffffff;
   padding: 20px 0; }
   header div#header {
-    width: 50%;
+    width: 60%;
     margin: auto;
     position: relative;
     display: flex;
@@ -50,11 +50,14 @@ header {
       header div#header ul#menu li a {
         font-family: Helvetica;
         text-decoration: none;
-        color: #ff801a;
-        font-size: 18px;
+        color: #7c7c7c;
+        font-size: 4.45pkt;
+        font-weight: bold;
         text-transform: uppercase;
         padding: 10px;
         display: block; }
+        header div#header ul#menu li a.chosen {
+          color: #ff801a; }
         header div#header ul#menu li a:hover {
           background-color: #ff801a;
           color: white; }
@@ -74,12 +77,19 @@ header {
       font-family: Helvetica; }
 
 div#main {
-  width: 55%;
+  width: 60%;
   margin: auto;
   margin-bottom: 20px; }
+  @media only screen and (max-width: 760px) {
+    div#main {
+      width: 90%; } }
   div#main div#navigation {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 760px) {
+      div#main div#navigation {
+        flex-direction: column; } }
     div#main div#navigation div#progress p {
       font-family: Helvetica;
       font-size: 13px;
@@ -87,7 +97,8 @@ div#main {
       color: #bdbdbd;
       text-align: center; }
     div#main div#navigation div#slider {
-      display: flex; }
+      display: flex;
+      justify-content: center; }
       div#main div#navigation div#slider h1 {
         font-family: Helvetica;
         color: #ff801a;
@@ -110,41 +121,48 @@ div#main {
         align-self: center; }
   div#main table {
     font-family: Helvetica;
-    background: #eeeeee;
     margin-bottom: 20px; }
-    div#main table tbody tr th.day {
-      font-size: 22px;
-      text-transform: uppercase;
-      color: #b3c304; }
-    div#main table tbody tr th.time {
-      padding: 0 35px;
-      font-weight: normal; }
-      div#main table tbody tr th.time span {
-        font-weight: bold; }
-    div#main table tbody tr td {
-      background: white;
-      padding: 15px 10px; }
-      div#main table tbody tr td h4 {
-        margin-top: 0;
-        margin-bottom: 10px;
-        color: #828282;
-        font-weight: normal;
-        text-align: center; }
-      div#main table tbody tr td img {
-        display: block;
-        margin: auto; }
-      div#main table tbody tr td.gym {
-        background: none;
-        text-align: center; }
-      div#main table tbody tr td.workout {
-        background: none;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center; }
-        div#main table tbody tr td.workout img {
-          margin: initial; }
-        div#main table tbody tr td.workout h4 {
-          margin: 0; }
+    div#main table tbody {
+      background: #eeeeee; }
+      div#main table tbody tr {
+        position: relative; }
+        div#main table tbody tr th.day {
+          font-size: 22px;
+          text-transform: uppercase;
+          color: #b3c304;
+          background: white;
+          width: 4.28571%; }
+        div#main table tbody tr th.time {
+          width: 5%;
+          font-weight: normal; }
+          div#main table tbody tr th.time span {
+            font-weight: bold; }
+        div#main table tbody tr td {
+          background: white;
+          padding: 15px 10px; }
+          div#main table tbody tr td h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #828282;
+            font-weight: normal;
+            text-align: center; }
+          div#main table tbody tr td img {
+            display: block;
+            margin: auto; }
+          div#main table tbody tr td.gym {
+            background: none;
+            text-align: center; }
+          div#main table tbody tr td.workout {
+            background: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center; }
+            div#main table tbody tr td.workout img {
+              margin: initial; }
+            div#main table tbody tr td.workout h4 {
+              margin: 0; }
+          div#main table tbody tr td.dish {
+            width: 4.28571%; }
     div#main table.desktop {
       display: block; }
       @media only screen and (max-width: 760px) {
@@ -155,115 +173,44 @@ div#main {
       @media only screen and (max-width: 760px) {
         div#main table.mobile {
           display: block; } }
-
-/*
-div#main{
-    
-    table {
-        
-        tbody {
-            tr {
-                th {
-                    
-                    &.chosen{
-                        color: $orangeColor;
-                    }
-                }
-                td {
-                    
-                    
-                }
-            }
-        }
-    }
-    div#posts{
+  div#main div#posts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Helvetica;
+    margin-bottom: 40px; }
+    @media only screen and (max-width: 760px) {
+      div#main div#posts {
+        flex-direction: column; } }
+    div#main div#posts div.post {
+      width: 33%; }
+      @media only screen and (max-width: 760px) {
+        div#main div#posts div.post {
+          width: 95%; } }
+      div#main div#posts div.post h2, div#main div#posts div.post p {
+        color: #828282;
+        text-align: center;
+        margin: 10px 0; }
+      div#main div#posts div.post button {
+        outline: 0;
+        cursor: pointer;
+        background: none;
+        border: 1px solid #828282;
+        padding: 10px;
+        border-radius: 2px;
+        color: #a4a4a4;
         display: flex;
-        margin-top: 15px;
-        div.post{
-            padding: 0 20px;
-            h2{
-                text-align: center;
-            }
-            &:first-child{
-                border-right: 1px solid $borderPost;
-            }
-            &:last-child{
-                border-left: 1px solid $borderPost;
-            }
-            button {
-                background: none;
-                border: 1px solid $borderPost;
-                padding: 10px;
-                border-radius: 5px;
-                outline: 0;
-                font-family: $fontHelvetica;
-                color: $buttonColor;
-                cursor: pointer;
-                font-size: 18px;
-                img{
-                    margin-right: 5px;
-                }
-            }
-        }
-    }
-}*/
-/*table.mobile{
-    display: none;
-}*/
-/*
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px){
-    div#main {
-        width: 100%;
-    }
-
-    div#navigation {
-        flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
-    }
-
-    div#posts {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    table.desktop{
-        display: none;
-    }
-
-    table.mobile {
-        width: 96%;
-        margin: auto;
-        display: block;
-        tr {
-            display: block;
-        }
-    
-        tr.diet {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            th{
-                width: 30%;
-            }
-            td{
-                width: 70%;
-            }
-        }
-    
-        th.day{
+        float: left;
+        margin-right: 15px; }
+        @media only screen and (max-width: 760px) {
+          div#main div#posts div.post button {
+            float: none;
             margin: auto;
-            display: block;
-            width: 100%;
-            padding: 15px 0;
-        }
-    
-        th.time {
-            align-self: center;
-        }
-    
-        td{
-            display: block;
-        }
-    }
-}*/
+            margin-bottom: 20px; } }
+        div#main div#posts div.post button span {
+          margin-left: 3px;
+          font-size: 15px;
+          font-weight: bold; }
+        div#main div#posts div.post button img {
+          margin-right: 10px; }

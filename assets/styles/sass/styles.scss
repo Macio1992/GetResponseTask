@@ -11,7 +11,7 @@ header {
     background: $headerColor;
     padding: 20px 0;
     div#header {
-        width: 50%;
+        width: $width;
         margin: auto;
         position: relative;
         display: flex;
@@ -47,10 +47,14 @@ header {
             }
             li {
                 a {
+                    &.chosen{
+                        color: $orangeColor;
+                    }
                     font-family: $fontHelvetica;
                     text-decoration: none;
-                    color: $orangeColor;
-                    font-size: 18px;
+                    color: $liColor;
+                    font-size: 4.45pkt;
+                    font-weight: bold;
                     text-transform: uppercase;
                     padding: 10px;
                     display: block;
@@ -85,18 +89,26 @@ header {
 }
 
 div#main {
-    width: 55%;
+    width: $width;
     margin: auto;
     margin-bottom: 20px;
+    @media only screen and (max-width: 760px){
+        width: 90%;
+    }
 
     div#navigation {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 760px){
+            flex-direction: column;
+        }
         div#progress {
             @include pNavHeader();
         }
         div#slider {
             display: flex;
+            justify-content: center;
             h1 {
                 font-family: $fontHelvetica;
                 color: $orangeColor;
@@ -123,18 +135,22 @@ div#main {
 
     table {
         font-family: $fontHelvetica;
-        background: #eeeeee;
+        
         margin-bottom: 20px;
         tbody {
+            background: #eeeeee;
             tr {
+                position: relative;
                 th {
                     &.day {
                         font-size: 22px;
                         text-transform: uppercase;
                         color: $greenColor;
+                        background: white;
+                        width: $widthTd;
                     }
                     &.time {
-                        padding: 0 35px;
+                        width: 5%;
                         font-weight: normal;
                         span{
                             font-weight: bold;
@@ -171,6 +187,12 @@ div#main {
                             margin: 0;
                         }
                     }
+                    &.dish{
+                        width: $widthTd;
+                    }
+                    &.free{
+                        // position: absolute;
+                    }
                 }
         }
         
@@ -190,121 +212,51 @@ div#main {
     }
 
     div#posts {
-
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $fontHelvetica;
+        margin-bottom: 40px;
+        @media only screen and (max-width: 760px){
+            flex-direction: column;
+        }
+        div.post{
+            width: 33%;
+            @media only screen and (max-width: 760px){
+                width: 95%;
+            }
+            h2, p {
+                color: $dishName;
+                text-align: center;
+                margin: 10px 0;
+            }
+            button {
+                @media only screen and (max-width: 760px){
+                    float: none;
+                    margin: auto;
+                    margin-bottom: 20px;
+                }
+                outline: 0;
+                cursor: pointer;
+                background: none;
+                border: 1px solid $dishName;
+                padding: 10px;
+                border-radius: 2px;
+                color: $buttonColor;
+                display: flex;
+                align-items: center;
+                float: left;
+                margin-right: 15px;
+                span {
+                    margin-left: 3px;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
 }
-
-/*
-div#main{
-    
-    table {
-        
-        tbody {
-            tr {
-                th {
-                    
-                    &.chosen{
-                        color: $orangeColor;
-                    }
-                }
-                td {
-                    
-                    
-                }
-            }
-        }
-    }
-    div#posts{
-        display: flex;
-        margin-top: 15px;
-        div.post{
-            padding: 0 20px;
-            h2{
-                text-align: center;
-            }
-            &:first-child{
-                border-right: 1px solid $borderPost;
-            }
-            &:last-child{
-                border-left: 1px solid $borderPost;
-            }
-            button {
-                background: none;
-                border: 1px solid $borderPost;
-                padding: 10px;
-                border-radius: 5px;
-                outline: 0;
-                font-family: $fontHelvetica;
-                color: $buttonColor;
-                cursor: pointer;
-                font-size: 18px;
-                img{
-                    margin-right: 5px;
-                }
-            }
-        }
-    }
-}*/
-
-/*table.mobile{
-    display: none;
-}*/
-/*
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px){
-    div#main {
-        width: 100%;
-    }
-
-    div#navigation {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    div#posts {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    table.desktop{
-        display: none;
-    }
-
-    table.mobile {
-        width: 96%;
-        margin: auto;
-        display: block;
-        tr {
-            display: block;
-        }
-    
-        tr.diet {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            th{
-                width: 30%;
-            }
-            td{
-                width: 70%;
-            }
-        }
-    
-        th.day{
-            margin: auto;
-            display: block;
-            width: 100%;
-            padding: 15px 0;
-        }
-    
-        th.time {
-            align-self: center;
-        }
-    
-        td{
-            display: block;
-        }
-    }
-}*/
-

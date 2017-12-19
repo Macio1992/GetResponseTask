@@ -13,7 +13,7 @@
         <div id="header">
             <button id="dropbutton" onclick="myFunction()">show menu</button>
             <ul id="menu" class="dropdown-content">
-                <li><a href="#">dashboard</a></li>
+                <li><a class="chosen" href="#">dashboard</a></li>
                 <li><a href="#">recipes</a></li>
                 <li><a href="#">challenge</a></li>
             </ul>
@@ -34,9 +34,9 @@
                 <img src="assets/images/progress.png" alt="progress">
             </div>
             <div id="slider">
-                <img src="assets/images/arrowleft.png" alt="arrowright">
-                <h1>Week7</h1>
-                <img src="assets/images/arrowright.png" alt="arrowright">
+                <img id="arrow-left" src="assets/images/arrowleft.png" alt="arrowleft">
+                <h1 id="week"></h1>
+                <img id="arrow-right" src="assets/images/arrowright.png" alt="arrowright">
             </div>
             <div id="options">
                 <p class="nav-header">
@@ -55,7 +55,7 @@
         <table class="mobile">
             <tr class="wholeDay">
                 <tr>
-                    <th class="day">day 64</th>
+                    <th colspan="5" class="day">day 64</th>
                 </tr>
                 <tr class="diet">
                     <th class="time">6:00<span>AM</span></th>
@@ -98,7 +98,7 @@
             </tr>
             <tr class="wholeDay">
                 <tr>
-                    <th class="day">day 65</th>
+                    <th colspan="5" class="day">day 65</th>
                 </tr>
                 <tr class="diet">
                     <th class="time">6:00<span>AM</span></th>
@@ -141,7 +141,7 @@
             </tr>
             <tr class="wholeDay">
                 <tr>
-                    <th class="day">day 66</th>
+                    <th colspan="5" class="day">day 66</th>
                 </tr>
                 <tr class="diet">
                     <th class="time">6:00<span>AM</span></th>
@@ -184,7 +184,7 @@
             </tr>
             <tr class="wholeDay">
                 <tr>
-                    <th class="day">day 67</th>
+                    <th colspan="5" class="day">day 67</th>
                 </tr>
                 <tr class="diet">
                     <th class="time">6:00<span>AM</span></th>
@@ -227,7 +227,7 @@
             </tr>
             <tr class="wholeDay">
                 <tr>
-                    <th class="day">day 68</th>
+                    <th colspan="5" class="day">day 68</th>
                 </tr>
                 <tr class="diet">
                     <th class="time">6:00<span>AM</span></th>
@@ -270,7 +270,7 @@
             </tr>
             <tr class="wholeDay">
                 <tr>
-                    <th class="day">day 69</th>
+                    <th  class="day">day 69</th>
                 </tr>
                 <tr class="diet">
                     <th class="time">6:00<span>AM</span></th>
@@ -351,7 +351,9 @@
                         <h4>Bod-e-Shake</h4>
                         <img src="assets/images/coffeeNotColored.png" alt="coffeNotColored">
                     </td>
-                    <td>free</td>
+                    <td class="free">
+                        <!-- <h4>free</h4> -->
+                    </td>
                 </tr>
                 <tr>
                     <th class="time">9:00<span>AM</span></th>
@@ -373,8 +375,8 @@
                     <td class="dish">
                         <h4>Grilled Steak</h4>
                     </td>
-                    <td class="dish">
-                        <h4>free</h4>
+                    <td class="free">
+                        <!-- <h4>free</h4> -->
                     </td>
                 </tr>
                 <tr>
@@ -397,8 +399,8 @@
                     <td class="dish">
                         <h4>Bod-e-Shake</h4>
                     </td>
-                    <td>
-                        <h4>free</h4>
+                    <td class="free">
+                        <!-- <h4>free</h4> -->
                     </td>
                 </tr>
                 <tr>
@@ -421,8 +423,8 @@
                     <td class="dish">
                         <h4>Bod-e Burn and Whole-Wheat English Muffin with Butter Spray</h4>
                     </td>
-                    <td>
-                        <h4>free</h4>
+                    <td class="free">
+                        <!-- <h4>free</h4> -->
                     </td>
                 </tr>
                 <tr>
@@ -445,8 +447,8 @@
                     <td class="dish">
                         <h4>Meal 5 from 69</h4>
                     </td>
-                    <td>
-                        <h4>free</h4>
+                    <td class="free">
+                        <!-- <h4>free</h4> -->
                     </td>
                 </tr>
                 <tr>
@@ -457,7 +459,7 @@
                     <td class="gym">LOW-CARB</td>
                     <td class="gym">LOW-CARB</td>
                     <td class="gym">HIGH-CARB</td>
-                    <td class="gym">free</td>
+                    <td class="gym"></td>
                 </tr>
                 <tr>
                     <th></th>
@@ -506,6 +508,7 @@
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/scripts/script.js"></script>
+    <script src="assets/js/scripts/slider.js"></script>
 </body>
 </html>
