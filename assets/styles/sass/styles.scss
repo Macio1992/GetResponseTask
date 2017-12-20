@@ -190,20 +190,17 @@ div#main {
                     &.dish{
                         width: $widthTd;
                     }
-                    &.free{
-                        // position: absolute;
-                    }
                 }
         }
         
         }
-        &.desktop{
+        &#desktop{
             display: block;
             @media only screen and (max-width: 760px){
                 display: none;
             }
         }
-        &.mobile {
+        &#mobile {
             display: none;
             @media only screen and (max-width: 760px){
                 display: block;
@@ -227,8 +224,10 @@ div#main {
             }
             h2, p {
                 color: $dishName;
-                text-align: center;
-                margin: 10px 0;
+                @media only screen and (max-width: 760px){
+                    text-align: center;
+                }
+                margin: 0 0 10px 0;
             }
             button {
                 @media only screen and (max-width: 760px){

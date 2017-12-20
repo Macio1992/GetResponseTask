@@ -7,7 +7,7 @@ header {
   background: #ffffff;
   padding: 20px 0; }
   header div#header {
-    width: 60%;
+    width: 50%;
     margin: auto;
     position: relative;
     display: flex;
@@ -77,7 +77,7 @@ header {
       font-family: Helvetica; }
 
 div#main {
-  width: 60%;
+  width: 50%;
   margin: auto;
   margin-bottom: 20px; }
   @media only screen and (max-width: 760px) {
@@ -131,7 +131,7 @@ div#main {
           text-transform: uppercase;
           color: #b3c304;
           background: white;
-          width: 4.28571%; }
+          width: 9.28571%; }
         div#main table tbody tr th.time {
           width: 5%;
           font-weight: normal; }
@@ -162,16 +162,16 @@ div#main {
             div#main table tbody tr td.workout h4 {
               margin: 0; }
           div#main table tbody tr td.dish {
-            width: 4.28571%; }
-    div#main table.desktop {
+            width: 9.28571%; }
+    div#main table#desktop {
       display: block; }
       @media only screen and (max-width: 760px) {
-        div#main table.desktop {
+        div#main table#desktop {
           display: none; } }
-    div#main table.mobile {
+    div#main table#mobile {
       display: none; }
       @media only screen and (max-width: 760px) {
-        div#main table.mobile {
+        div#main table#mobile {
           display: block; } }
   div#main div#posts {
     display: flex;
@@ -189,8 +189,10 @@ div#main {
           width: 95%; } }
       div#main div#posts div.post h2, div#main div#posts div.post p {
         color: #828282;
-        text-align: center;
-        margin: 10px 0; }
+        margin: 0 0 10px 0; }
+        @media only screen and (max-width: 760px) {
+          div#main div#posts div.post h2, div#main div#posts div.post p {
+            text-align: center; } }
       div#main div#posts div.post button {
         outline: 0;
         cursor: pointer;
